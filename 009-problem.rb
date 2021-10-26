@@ -1,9 +1,9 @@
 def find_pythagorean_triplet
   (1..1000).each do |i|
     (1..1000).each do |j|
-      next if j < i
-      a = Math.sqrt(j**2 - i**2)
-      b = 1000 - j - i
+      break if i < j
+      a = Math.sqrt(i**2 - j**2)
+      b = 1000 - i - j
 
       return [a, i, j] if a == b
     end
